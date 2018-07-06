@@ -1,4 +1,4 @@
-// main
+// Given a string, find the length of the longest substring without repeating characters.
 package main
 
 import (
@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	
 	str := []byte("abcbbbbcdbef")
 
 	fmt.Println(string(maxsubstr(str)))
