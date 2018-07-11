@@ -15,7 +15,7 @@ func main() {
 	fmt.Println(string(maxPalindrome([]byte("12321123432"))))
 }
 
-// 查找
+// Manacher 算法查找
 func maxPalindrome(str []byte) []byte {
 	//加符号，消除奇偶
 	newstr := make([]byte, 2*len(str)+1)
@@ -51,7 +51,7 @@ func maxPalindrome(str []byte) []byte {
 	return bytes.Replace(newstr[maxMid-maxRange:maxMid+maxRange+1], []byte{'#'}, nil, -1)
 }
 
-
+//动态规划 算法
 func longestPalindrome(str []byte) []byte {
 	n := len(str)
 	pal := make([][]bool, n)
